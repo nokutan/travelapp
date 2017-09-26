@@ -1,0 +1,10 @@
+<h1>Tags</h1>
+
+<tbody>
+     <%= @tags.each do |tag| %>
+          <tr>
+             <td><%= simple_format tag.title %></td>
+             <td><%= simple_format tag.body %></td>
+          </tr>
+     <% end %>
+ </tbody>
