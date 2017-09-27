@@ -1,6 +1,11 @@
 class ApplicationController < ActionController::Base
     protect_from_forgery with: :exception
 
+    def hello
+        render html: "hello, world!"
+    end
+
+
     helper_method :plan_structure
 
     def plan_structure
@@ -11,5 +16,4 @@ class ApplicationController < ActionController::Base
             session[:plan_id]=@plan.id
         end
     end
-    
 end
