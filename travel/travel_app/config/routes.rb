@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root 'application#hello'
+    get 'tags/index'
+    root 'application#hello'
 end
