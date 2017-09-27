@@ -1,10 +1,10 @@
 <h1>Tags</h1>
 
-<tbody>
-     <%= @tags.each do |tag| %>
-          <tr>
-             <td><%= simple_format tag.title %></td>
-             <td><%= simple_format tag.body %></td>
-          </tr>
-     <% end %>
- </tbody>
+<ul>
+<% @tags.each do |tag| %>
+        <li><%= simple_format tag.title %></li>
+        <%= simple_format tag.body %>
+        <a href = " #{tag.url} " Target="_blank" ></a>
+        <%= link_to tag.url, tag.url%>
+<% end %>
+</ul>
