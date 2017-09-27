@@ -20,14 +20,14 @@
 	  overflow: hidden;
 		font-family: "Arial Black", Arial, Helvetica, Sans, FreeSans,   Jamrul, Garuda, Kalimati;
 		color: #333;
-		font-size:36px;
-		line-height:36px;
+		font-size:15px;
+		line-height:20px;
 		text-shadow: #fff 1px 1px 1px;
 	}
 
 	.boxtext {
 	    margin: 2em 0;
-	    background: #FFFFF0;
+	    background: #F5F5F5;
 	    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
 	}
 	.boxtext .boxtitle {
@@ -39,9 +39,18 @@
 	    font-weight: bold;
 	    letter-spacing: 0.05em;
 	}
+
+  .boxtext .boxtitle2 {
+	    font-size: 1.0em;
+	    background: #e6e1e1;
+      padding: 15px 20px;
+      margin: 2;
+	    letter-spacing: 0.02em;
+	}
+
 	.boxtext p {
 	    padding: 15px 20px;
-	    margin: 0;
+	    margin: 2;
 	}
 
 	#husen {
@@ -65,7 +74,7 @@
 	    -o-transform: rotate(2deg);
 	    -ms-transform: rotate(2deg);
 	    transform: rotate(2deg);
-	    z-index: -1; /* 重なり順を背面へ */
+	    z-index: -1; /* 重なり順を背面へずらす */
 	}
 
 	#titlefont{
@@ -78,27 +87,29 @@
 </style>
 </head>
 <body>
+  <div class="main">
+    <h2>見出し</h2>
+    <p>これは<span class="light">例</span>です。</p>
+    <p>
+    <a href="https://www.yahoo.co.jp/">ホームへ</a>
+    戻ります。</p>
+  </div>
+
 
 	<div class="boxtext">
-	    <div class="boxtitle">建物</div>
-	    <p>	<a href="https://www.hiroshima-u.ac.jp/ids" target="_blank" class="thumbnail-box">
-				  <img src="https://www.hiroshima-u.ac.jp/system/files/82945/_59A1976.JPG" alt="広大情報科学部" width="" height="" class="thumbnail-box-img">
-				  <span class="thumbnail-box-title">広島大学情報科学部</span>
-				</a>
-			</p>
+	    <div class="boxtitle">広島大学</div>
+  	    <p>	説明文
+          <img src="" alt="" width="" height="">
+  			</p>
+      <div class="boxtitle2">URL
+          <a href="https://www.yahoo.co.jp/" target="_blank">アンカーテキスト</a>
+      </div>
 	</div>
 
 
   <div id="husen">
   <h1>付箋</h1>
   <p>段落</p>
-  </div>
-  <div class="main">
-  <h2>見出し</h2>
-  <p>これは<span class="light">例</span>です。</p>
-  <p>
-  <a href="https://saruwakakun.com/">ホームへ</a>
-  戻ります。</p>
-  </div>
+
 </body>
 </html>
