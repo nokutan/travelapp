@@ -5,6 +5,7 @@ class TagsController < ApplicationController
    end 
    
    def new
+       @tag=Tag.new
    end
    
     def create
@@ -16,6 +17,10 @@ class TagsController < ApplicationController
         else
             render plain: @post.errors.inspect
         end
+   end
+   
+   def edit
+       @post=Post.find(params[:id])
    end
    
    private
