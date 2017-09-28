@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20170927072328) do
   create_table "tags", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
-    t.text     "url"
+    t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
