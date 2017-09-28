@@ -7,10 +7,15 @@ class TagsController < ApplicationController
    def new
    end
    
-   def create
-       #render plain: params[:post].inspect
-       Tag.create(post_params)
-       redirect_to tags_path
+    def create
+   #render plain: params[:post].inspect
+   #Tag.create(post_params)
+    @post=Tag.new(post_params)
+        if @post.save
+            redirect_to tags_path
+        else
+            render plain: @post.errors.inspect
+        end
    end
    
    private
