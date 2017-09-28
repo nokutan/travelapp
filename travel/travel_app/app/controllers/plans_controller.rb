@@ -1,8 +1,11 @@
 class PlansController < ApplicationController
     before_action :setup_plan_tag,only:[:add_tag,:delete_tag]
     def show
-       @plan=Plan.first
-       @plan_tags=Plan.first.tags
+       @plan=Plan.all
+       
+       @plan.count.times do |i|
+         @plan_tags=@plan[i].tags
+       end
     end
     
     
