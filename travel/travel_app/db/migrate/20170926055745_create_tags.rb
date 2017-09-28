@@ -3,7 +3,7 @@ class CreateTags < ActiveRecord::Migration[5.0]
     create_table :tags do |t|
       t.string :title
       t.text :body
-      t.text :url
+      t.string :url
 
       t.timestamps
     end

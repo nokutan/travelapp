@@ -1,11 +1,8 @@
 class PlansController < ApplicationController
     before_action :setup_plan_tag,only:[:add_tag,:delete_tag]
     def show
-       # @plan = Plan.first
-       # @plan_tags=@plan.plan_tags
-        
-        @plan = plan_structure
-        @plan_tags=@plan.plan_tags
+       @plan=Plan.first
+       @plan_tags=Plan.first.tags
     end
     
     
