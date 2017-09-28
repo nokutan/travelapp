@@ -1,0 +1,21 @@
+<div class="main">
+    <h2>見出し</h2>
+
+
+  </div>
+
+    <% @tags.each do |tag| %>
+    
+    	<div class="boxtext">
+    	    <div class="boxtitle"><%= simple_format tag.title %></div>
+      	    <p><%= simple_format tag.body %>
+              <img src="" alt="" width="" height="">
+      			</p>
+          <div class="boxtitle2">URL
+              <a href=" #{tag.url} " target="_blank"></a>
+              <%= link_to tag.url, tag.url%>
+          </div>
+    	</div>
+    	
+    <% end %>
+    
