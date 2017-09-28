@@ -1,19 +1,19 @@
-<div class="main">
-    <h2>見出し</h2>
+<h1>Plans</h1>
+
+<h2><%=simple_format @plan.title %></h2>
 
 
-  </div>
 
-    <% @tags.each do |tag| %>
+    <% @plan_tags.each do |plan_tag| %>
     
     	<div class="boxtext">
-    	    <div class="boxtitle"><%= simple_format tag.title %></div>
-      	    <p><%= simple_format tag.body %>
+    	    <div class="boxtitle"><%= simple_format plan_tag.title %></div>
+      	    <p><%= simple_format plan_tag.body %>
               <img src="" alt="" width="" height="">
       			</p>
           <div class="boxtitle2">URL
-              <a href=" #{tag.url} " target="_blank"></a>
-              <%= link_to tag.url, tag.url%>
+              <a href=" #{plan_tag.url} " target="_blank"></a>
+              <%= link_to plan_tag.url, plan_tag.url%>
           </div>
     	</div>
     	
