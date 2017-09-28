@@ -1,0 +1,177 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+/* husen */
+
+.thumbnail-box {
+	  display: block;
+	  margin-bottom: .5em;
+	  overflow: hidden;
+	  width: 100%;
+	}
+	.thumbnail-box-img {
+	  float: left;
+	  margin-right: .5em;
+	}
+	.thumbnail-box-title{
+	  display: block;
+	  overflow: hidden;
+		font-family: "Arial Black", Arial, Helvetica, Sans, FreeSans,   Jamrul, Garuda, Kalimati;
+		color: #333;
+		font-size:15px;
+		line-height:20px;
+		text-shadow: #fff 1px 1px 1px;
+	}
+	.boxtext {
+	    margin: 2em 0;
+	    background: #F5F5F5;
+	    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+	}
+	.boxtext .boxtitle {
+	    font-size: 1.2em;
+	    background: #EEE8AA;
+	    padding: 4px;
+	    text-align: center;
+	    color: #FFF;
+	    font-weight: bold;
+	    letter-spacing: 0.05em;
+	}
+  .boxtext .boxtitle2 {
+	    font-size: 1.0em;
+	    background: #e6e1e1;
+      padding: 15px 20px;
+      margin: 2;
+	    letter-spacing: 0.02em;
+	}
+	.boxtext p {
+	    padding: 15px 20px;
+	    margin: 2;
+	}
+	#husen {
+    width:250px;
+    height:50px;
+    background-color:#eee;
+    position: relative;
+	}
+	#husen:after {
+	    width:200px;
+	    height:45px;
+	    content: "";
+	    position: absolute;
+	    top: 0px;
+	    right: 3px;
+	    -webkit-box-shadow: 0 5px 5px #555 ;
+	    -moz-box-shadow: 0 5px 5px #555 ;
+	    box-shadow: 0 5px 5px #555 ;
+	    -webkit-transform: rotate(2deg);
+	    -moz-transform: rotate(2deg);
+	    -o-transform: rotate(2deg);
+	    -ms-transform: rotate(2deg);
+	    transform: rotate(2deg);
+	    z-index: -1; /* 重なり順を背面へずらす */
+	}
+	#titlefont{
+	    font-family: "Arial Black", Arial, Helvetica, Sans, FreeSans,   Jamrul, Garuda, Kalimati;
+	    color: #333;
+	    font-size:36px;
+	    line-height:36px;
+	    text-shadow: #fff 1px 1px 1px;
+	}

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     #post 'update_tag'=>'plans#update_tag'<-更新するなら...
     delete 'delete_item'=>'plans#delete_tag'
 
-
-
+    get 'static_pages/home'
+    root 'static_pages#home'
 
 end
