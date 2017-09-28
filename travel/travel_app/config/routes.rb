@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
     
-    root 'application#hello'
     #test
     
     devise_for :users
