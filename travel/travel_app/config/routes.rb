@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
     get 'static_pages/home'
     get 'static_pages/home'
+    get 'dynamic_pages/home'
     get 'tags/index'
     
     root 'dynamic_pages#home'

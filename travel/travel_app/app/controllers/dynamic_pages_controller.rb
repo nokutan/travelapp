@@ -28,4 +28,9 @@ class DynamicPagesController < ApplicationController
         @plan_tag=plan_structure.plan_tags.find_by(tag_id: params[tag_id])
     end
     
+    def new
+    end
+    
+    
+    
 end

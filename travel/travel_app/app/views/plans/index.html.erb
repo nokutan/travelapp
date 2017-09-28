@@ -1,5 +1,6 @@
 <h1>Plans</h1>
 
+<%= button_to "new", new_plan_path, :method => :get %>
 
 <% @plan.each do |plan| %>
     <p2><%=simple_format plan.title %></p2>
