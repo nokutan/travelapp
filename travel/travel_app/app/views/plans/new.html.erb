@@ -1,0 +1,13 @@
+<h2>Plan 作成フォーム</h2>
+
+<%= form_for :post, url: plans_path do |f| %>
+
+<p>
+    <%= f.text_field :title,placeholder: 'title' %>
+</p>
+
+<p>
+    <%= f.submit %>
+</p>
+
+<% end %>
