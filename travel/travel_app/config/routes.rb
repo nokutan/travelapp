@@ -3,8 +3,8 @@ Rails.application.routes.draw do
     root 'application#hello'
     #test
     
-  devise_for :users
-  get 'static_pages/home'
+    devise_for :users
+    get 'static_pages/home'
 
     get 'tags/index'
     

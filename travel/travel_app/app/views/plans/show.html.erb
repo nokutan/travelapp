@@ -1,0 +1,18 @@
+<h2>Plans</h2>
+
+
+<ul>
+    <%= @plan %>
+            <%=simple_format @plan.title %>
+            <li>a</li>
+    <%= @plan_tags %>
+            <li>b</li>
+    
+    <% @plan_tags.each do |plan_tag| %>
+            <li>c</li>
+        <%= plan_tag.body %>
+            <li>d</li>
+            
+    <% end %>
+</ul>
+        <li>end</li>
