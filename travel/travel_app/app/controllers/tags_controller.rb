@@ -18,7 +18,7 @@ class TagsController < ApplicationController
    end
    
    def edit
-       @post=Tag.find(params[:id])
+       @tag=Tag.find(params[:id])
    end
    
    def update
