@@ -1,6 +1,6 @@
-<h2>test tag入力フォーム</h2>
+<h2>test tag編集フォーム</h2>
 
-<%= form_for :tag, url: tags_path do |f| %>
+<%= form_for @tag, url: tag_path(@tag) do |f| %>
 
 <p>
     <%= f.text_field :title,placeholder: 'title' %>
