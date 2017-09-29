@@ -2,9 +2,6 @@ Rails.application.routes.draw do
 
     #test
     devise_for :users
-    get 'dynamic_pages/home'
-
-    get 'static_pages/home'
     
  
 
@@ -24,6 +21,6 @@ Rails.application.routes.draw do
     delete '/delete_tag/:id' => 'plan_tags#delete_tag'
     
     
-    root 'dynamic_pages#home'
+    root 'plans#index'
 
 end
