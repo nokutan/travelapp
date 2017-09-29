@@ -9,23 +9,30 @@ class TagsController < ApplicationController
    end
    
     def create
-   #render plain: params[:post].inspect
-   #Tag.create(post_params)
-    @post=Tag.new(post_params)
-        if @post.save
+        @tag=Tag.new(post_params)
+        if @tag.save
             redirect_to tags_path
         else
-            render plain: @post.errors.inspect
+            render 'new'
         end
    end
    
    def edit
-       @post=Post.find(params[:id])
+       @post=Tag.find(params[:id])
+   end
+   
+   def update
+       @tag=Tag.find(params[:id])
+       if @tag.update(post_params)
+           redirect_to tags_path
+       else
+           render 'edit'
+       end
    end
    
    private
        def post_params
-           params.require(:post).permit(:title,:body,:url)
+           params.require(:tag).permit(:title,:body,:url)
        end
    
 end

@@ -14,3 +14,10 @@
  *= require_self
  *= require devise_bootstrap_views
  */
+ 
+ 
+.error {
+  font-size: 12px;
+  font-weight: bold;
+  color: tomato;
+}

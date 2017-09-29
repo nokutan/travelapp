@@ -2,9 +2,15 @@
 
 <ul>
 <% @tags.each do |tag| %>
-        <li><%= simple_format tag.title %></li>
+        <li>
+                <%= simple_format tag.title %>
+                <%= link_to '[Edit]', edit_tag_path(tag), class: 'command' %>
+        </li>
+        
         <%= simple_format tag.body %>
         <a href = " #{tag.url} " Target="_blank" ></a>
         <%= link_to tag.url, tag.url%>
+        
 <% end %>
 </ul>
+
