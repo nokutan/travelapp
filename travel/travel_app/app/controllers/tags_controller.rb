@@ -30,6 +30,16 @@ class TagsController < ApplicationController
        end
    end
    
+   
+   def destroy
+       @tag=Tag.find(params[:id])
+       @tag.destroy
+       redirect_to tags_path
+   end
+   
+   def test
+   end
+   
    private
        def post_params
            params.require(:tag).permit(:title,:body,:url)
