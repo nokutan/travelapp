@@ -3,9 +3,6 @@
 
 /* universal */
 
-body {
-  padding-top: 60px;
-}
 
 section {
   overflow: auto;
@@ -32,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   text-align: center;
 }
 
@@ -42,7 +39,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: #ffffff;
 }
 
 p {
@@ -128,7 +125,7 @@ footer ul li {
 	.boxtext .boxtitle {
 	    font-size: 1.2em;
 	    background: #EEE8AA;
-	    padding: 4px;
+	    
 	    text-align: center;
 	    color: #FFF;
 	    font-weight: bold;
@@ -141,6 +138,13 @@ footer ul li {
       margin: 2;
 	    letter-spacing: 0.02em;
 	}
+	.boxplan {
+	    margin: 2em 0;
+	    padding: 15px 20px;
+	    background: #555555;
+	    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+	}
+	
 	.boxtext p {
 	    padding: 15px 20px;
 	    margin: 2;
