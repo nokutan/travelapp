@@ -11,8 +11,6 @@ class TagsController < ApplicationController
         @tag = Tag.find(params[:id]) 
    end
    
-   
-   
    def create
        #render plain: params[:post].inspect
        Tag.create(post_params)

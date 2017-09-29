@@ -11,7 +11,8 @@ Rails.application.routes.draw do
     resources :plans do
       member do
        post 'add_tag'
-       post 'delete_tag'
+       post 'added_tag'
+       #delete 'delete_tag'
       end
     end
 
@@ -20,7 +21,7 @@ Rails.application.routes.draw do
     # post 'plans/plans'=>'plans#show'
     get  '/plans/:id/add_tag' =>  'plans#add_tag'
     post  '/add_tag/:id' =>  'plans#add_tag'
-    delete '/delete_tag/:id' => 'plan_tags#delete_tag'
+    delete '/delete_tag/:id' => 'plans#delete_tag'
     
     
     root 'static_pages#home'

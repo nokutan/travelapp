@@ -34,23 +34,28 @@ class PlansController < ApplicationController
     redirect_to plans_path
   end
   
-    
+
   def add_tag
-    #render html: 'add_tag'
+
     @tags = Tag.all
     @plan = Plan.find(params[:id]) 
-    @plan.tags.build(tag: params[:tag])
-    #@plan.tags.new()
-    if @plan.save
-      redirect_to plans_path
-    else
-      render 'new'
+    if  @plan.tags.create(
+         title: params[:tag_title],
+         body: params[:tag_body],
+         url: params[:tag_url])
+     
+      print("save!!!!!!!!!!!!!!!!1")
+      redirect_to plan_path
+   
     end
   end
   
+  
+  
   def delete_tag
-    @plan = Plan.find(params[:id]) 
-    @plan.tags.destoroy(tag_id: params[:tag_id])
+    #@plan = Plan.find(params[:id]) 
+    #@plan.T
+    Tag.where(id: params[:id]).destroy
   end
   
   

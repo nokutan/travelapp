@@ -7,7 +7,10 @@
     <% @plan.tags.each do |plan_tag| %>
         <li>
             <%= link_to plan_tag.title, tag_path(@plan.id) %>
-            <%#= simple_format plan_tag.title %>
+            <%= link_to '[x]', 
+                    plan_path(plan_tag.id), 
+                    method: :delete,
+                    class: 'command'%>
         </li>
         <%= simple_format plan_tag.body %>
         <a href = " #{plan_tag.url} " Target="_blank" ></a>
