@@ -1,6 +1,6 @@
 <h1><div class="tagtitle"><%= @plan.title %></div></h1>
 
-<div class="midashi"><%= link_to 'タグを追加する', add_tag_plan_path(@plan.id) %></div>
+<div class="midashi"><%= button_to 'Add Tag', add_tag_plan_path(@plan.id) %></div>
 
 
     <% @plan.tags.each do |plan_tag| %>

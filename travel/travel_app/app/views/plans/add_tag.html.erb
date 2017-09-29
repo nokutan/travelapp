@@ -1,15 +1,30 @@
 <h1>Select Tags To Add Into <%= @plan.title %></h1>
-<p>---------------</p>
 
 <ul>
     <% @tags.each do |tag| %>
+    
+        <div class="boxtext">
+            
     <%# @@ptag=@plan.tags %>
     <%# @@tag=tag %>
-        <p><%= tag.title %></p>
+    
+    
+        <div class="boxtitle"><%= tag.title %></p></div>
         <p><%= tag.body %></p>
-        <p><%= link_to tag.url, tag.url%></p>
-        <%= link_to '[add]',  add_tag_update_plan_path(:plan_id=>@plan.id,:tag_id=>tag.id)%>
+        <div class="boxtitle2">URL
+                <a href = " #{tag.url} " Target="_blank" ></a>
+                <%= link_to tag.url, tag.url%>
+        </div>
+        
+        
+        
         <%#= link_to '[add]',  add_tag_update_plan_path() %>
         <%# @plan.tags << tag %>
+        
+        </div>
+        
+        <%= button_to 'Add',  add_tag_update_plan_path(:plan_id=>@plan.id,:tag_id=>tag.id)%>
+        
+        
     <% end %>
 </ul>
