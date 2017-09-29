@@ -5,8 +5,10 @@
 
 <% @plan.each do |plan| %>
     <ul>
-        <%#=simple_format plan.title %>
-    <%= link_to plan.title, plan_path(plan.id) %>
+        
+                <div class="sen1">
+                <div class="boxtitle"><%= link_to plan.title, plan_path(plan.id) %></div>
+                </div>
     </ul>
 
 <% end %>

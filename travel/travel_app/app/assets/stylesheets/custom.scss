@@ -183,3 +183,52 @@ footer ul li {
 	    line-height:36px;
 	    text-shadow: #fff 1px 1px 1px;
 	}
+	
+	.boxhuti {
+    background-color: #fbeefc;
+    border-left: 8px solid #c92ad2;
+    color: #c92ad2;
+    margin: 2em 0;
+    padding: 2em;
+}
+
+	.sen1 {
+	position: relative;
+	padding-left: 25px;
+	}
+	
+	.sen1:before {
+	position: absolute;
+	content: '';
+	bottom: -3px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border: none;
+	border-left: solid 15px transparent;
+	border-bottom: solid 15px rgb(119, 195, 223);
+	}
+	
+		.sen1:after {
+	position: absolute;
+	content: '';
+	bottom: -3px;
+	left: 10px;
+	width: 100%;
+	border-bottom: solid 3px rgb(119, 195, 223);
+	}
+
+
+		.tagtitle {
+		background: #b0dcfa; /*背景色*/
+		padding: 0.5em;/*文字周りの余白*/
+		color: white;/*文字を白に*/
+		border-radius: 0.5em;/*角の丸み*/
+		}
+		
+		
+		.midashi {
+		border-bottom: double 5px #FFC778;
+		/*線の種類（二重線）太さ 色*/
+		}
+

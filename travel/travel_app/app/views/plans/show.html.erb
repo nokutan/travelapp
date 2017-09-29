@@ -1,16 +1,21 @@
-<h1><%= @plan.title %></h1>
+<h1><div class="tagtitle"><%= @plan.title %></div></h1>
 
-<%= link_to 'タグを追加する', add_tag_plan_path(@plan.id) %>
+<div class="midashi"><%= link_to 'タグを追加する', add_tag_plan_path(@plan.id) %></div>
 
-<p>---------------</p>
-<ul>
+
     <% @plan.tags.each do |plan_tag| %>
-        <li>
-            <%= link_to plan_tag.title, tag_path(@plan.id) %>
-            <%#= simple_format plan_tag.title %>
-        </li>
-        <%= simple_format plan_tag.body %>
-        <a href = " #{plan_tag.url} " Target="_blank" ></a>
-        <%= link_to plan_tag.url, plan_tag.url%>
+    
+    	<div class="boxtext">
+    	    <div class="boxtitle"><%= link_to plan_tag.title, tag_path(@plan.id) %></div>
+      	    <p><%= simple_format plan_tag.body %>
+              
+      			</p>
+          <div class="boxtitle2">URL
+              <a href = " #{plan_tag.url} " Target="_blank" ></a>
+              <%= link_to plan_tag.url, plan_tag.url%>
+          </div>
+    	</div>
+    	
     <% end %>
-</ul>
+    
+  </div>
