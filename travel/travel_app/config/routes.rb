@@ -25,6 +25,6 @@ Rails.application.routes.draw do
     delete '/delete_tag/:id' => 'plan_tags#delete_tag'
     
     
-    root 'static_pages#home'
+    root 'dynamic_pages#home'
 
 end

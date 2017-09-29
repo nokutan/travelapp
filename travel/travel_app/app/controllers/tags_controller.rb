@@ -7,8 +7,7 @@ class TagsController < ApplicationController
    def new
        @tag=Tag.new
    end
-   
-<<<<<<< HEAD
+
     def create
         @tag=Tag.new(post_params)
         if @tag.save
@@ -38,26 +37,12 @@ class TagsController < ApplicationController
        redirect_to tags_path
    end
    
-   def test
-=======
+
    def show
         @tag = Tag.find(params[:id]) 
    end
    
    
-   
-   def create
-       #render plain: params[:post].inspect
-       Tag.create(post_params)
-       redirect_to tags_path
-   end
-   
-   def destoroy
-       @post = Post.find(params[:id]) 
-       @post.destoroy
-       redirect_to tags_path
->>>>>>> 95caf8ed15f06cf071d4e7c50aa7b2caabeb9a9c
-   end
    
    private
        def post_params
