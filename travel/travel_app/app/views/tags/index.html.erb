@@ -7,7 +7,7 @@
         
         <div class="boxtext">
         
-                <div class="boxtitle"><%= simple_format tag.title %></div>
+                <div class="boxtitle"><%= link_to tag.title , tag_path(tag.id) %></div>
                 <p>
                 
                 <%= simple_format tag.body %>
