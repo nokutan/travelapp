@@ -1,0 +1,16 @@
+<h1>Plans</h1>
+
+<%= button_to "new", new_plan_path, :method => :get %>
+
+<% @plan.each do |plan| %>
+    <p2><%=simple_format plan.title %></p2>
+    <p>---------------</p>
+    <ul>
+        <% @plan.find(plan.id).tags.each do |plan_tag| %>
+            <li><%= simple_format plan_tag.title %></li>
+            <%= simple_format plan_tag.body %>
+            <a href = " #{plan_tag.url} " Target="_blank" ></a>
+            <%= link_to plan_tag.url, plan_tag.url%>
+        <% end %>
+    </ul>
+<% end %>

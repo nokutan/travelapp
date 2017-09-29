@@ -1,5 +1,7 @@
 <h1>Tags</h1>
 
+<%= button_to "new", new_tag_path, :method => :get %>
+
 <ul>
 <% @tags.each do |tag| %>
         <li>
