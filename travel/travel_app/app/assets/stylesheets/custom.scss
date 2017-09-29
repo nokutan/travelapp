@@ -124,10 +124,11 @@ footer ul li {
 	}
 	.boxtext .boxtitle {
 	    font-size: 1.2em;
+	    padding: 15px 20px;
 	    background: #EEE8AA;
 	    
 	    text-align: center;
-	    color: #FFF;
+	    color: #000F;
 	    font-weight: bold;
 	    letter-spacing: 0.05em;
 	}
@@ -182,4 +183,31 @@ footer ul li {
 	    font-size:36px;
 	    line-height:36px;
 	    text-shadow: #fff 1px 1px 1px;
+	}
+	
+	#page-top {
+	    position: fixed;
+	    bottom: 20px;
+	    right: 20px;
+	    font-size: 77%;
+	}
+	#page-top a {
+	    background: #666;
+	    text-decoration: none;
+	    color: #fff;
+	    width: 100px;
+	    padding: 30px 0;
+	    text-align: center;
+	    display: block;
+	    border-radius: 5px;
+	    filter:alpha(opacity=70);
+	    -moz-opacity: 0.7;
+	    opacity: 0.7;
+	}
+	#page-top a:hover {
+	    text-decoration: none;
+	    background: #999;
+	    filter:alpha(opacity=70);
+	    -moz-opacity: 0.7;
+	    opacity: 0.7;
 	}

@@ -12,14 +12,37 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    
-      
         
     <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
       
+      <p id="page-top"><a href="#wrap">PAGE TOP</a></p>
+      
+      <script type="text/javascript">
+        $(function() {
+            var topBtn = $('#page-top');    
+            topBtn.hide();
+            //スクロールが100に達したらボタン表示
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    topBtn.fadeIn();
+                } else {
+                    topBtn.fadeOut();
+                }
+            });
+            //スクロールしてトップ
+            topBtn.click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+                return false;
+            });
+        });
+      </script>
+      
       <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
+
