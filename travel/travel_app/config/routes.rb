@@ -17,7 +17,6 @@ Rails.application.routes.draw do
       end
     end
 
-    #resources :plan_tags
 
     # post 'plans/plans'=>'plans#show'
     get  '/plans/:id/add_tag' =>  'plans#add_tag'

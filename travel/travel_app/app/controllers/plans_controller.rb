@@ -39,13 +39,10 @@ class PlansController < ApplicationController
     #render html: 'add_tag'
     @tags = Tag.all
     @plan = Plan.find(params[:id]) 
-    @plan.tags.build(tag: params[:tag])
-    #@plan.tags.new()
-    if @plan.save
-      redirect_to plans_path
-    else
-      render 'new'
-    end
+    
+    #@plan.tags.build(tag:)
+    #@plan.tags.new(params[:tag])
+   
   end
   
   def delete_tag
