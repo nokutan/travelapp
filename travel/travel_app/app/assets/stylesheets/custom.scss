@@ -118,7 +118,7 @@ footer ul li {
 		text-shadow: #fff 1px 1px 1px;
 	}
 	.boxtext {
-	    margin: 2em 0;
+	    margin: 2em 0 0.5em;
 	    background: #F5F5F5;
 	    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
 	}
@@ -148,6 +148,10 @@ footer ul li {
 	.boxtext p {
 	    padding: 15px 20px;
 	    margin: 2;
+	}
+	.form_conf form {
+    display: inline-block;
+    margin: 0 2px;
 	}
 	#husen {
     width:250px;
