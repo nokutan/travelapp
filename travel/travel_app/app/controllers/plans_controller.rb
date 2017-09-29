@@ -9,24 +9,6 @@ class PlansController < ApplicationController
       @plan = Plan.find(params[:id]) 
   end
   
-  def add_tag
-    #render html: 'add_tag'
-    @tags = Tag.all
-    @plan = Plan.find(params[:id]) 
-    @plan.tags.build(tag: params[:tag])
-    #@plan.tags.new()
-    if @plan.save
-      redirect_to plans_path
-    else
-      render 'new'
-    end
-  end
-  
-  def delete_tag
-    @plan = Plan.find(params[:id]) 
-    @plan.tags.destoroy(tag_id: params[:tag_id])
-  end
-  
   def new
   end
   
@@ -52,10 +34,29 @@ class PlansController < ApplicationController
     redirect_to plans_path
   end
   
+    
+  def add_tag
+    #render html: 'add_tag'
+    @tags = Tag.all
+    @plan = Plan.find(params[:id]) 
+    @plan.tags.build(tag: params[:tag])
+    #@plan.tags.new()
+    if @plan.save
+      redirect_to plans_path
+    else
+      render 'new'
+    end
+  end
+  
+  def delete_tag
+    @plan = Plan.find(params[:id]) 
+    @plan.tags.destoroy(tag_id: params[:tag_id])
+  end
+  
   
   private
-  def plan_params
-     params.require(:plan).permit(:title)
-  end
+    def plan_params
+       params.require(:plan).permit(:title)
+    end
 
 end
