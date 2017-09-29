@@ -1,23 +1,32 @@
 <h1>Tags</h1>
 
-<%= button_to "new", new_tag_path, :method => :get %>
+<%= button_to "Create", new_tag_path, :method => :get %>
 
 <ul>
 <% @tags.each do |tag| %>
-        <li>
-                <%= simple_format tag.title %>
-                <%= link_to '[Edit]', edit_tag_path(tag), class: 'command' %>
-                <%= link_to '[x]',
+        
+        <div class="boxtext">
+        
+                <div class="boxtitle"><%= simple_format tag.title %></div>
+                <p>
+                
+                <%= simple_format tag.body %>
+                </p>
+                <div class="boxtitle2">URL
+                <a href = " #{tag.url} " Target="_blank" ></a>
+                <%= link_to tag.url, tag.url%>
+                </div>
+                
+        </div>
+        <div class="form_conf">
+        <%= button_to'Edit', edit_tag_path(tag), method: :get, class: 'command' %>
+                <%= button_to'Delete',
                         tag_path(tag),
                         method: :delete, 
                         class: 'command',
                         data: {confirm: '削除してもよろしいですか?'}
                 %>
-        </li>
-        
-        <%= simple_format tag.body %>
-        <a href = " #{tag.url} " Target="_blank" ></a>
-        <%= link_to tag.url, tag.url%>
+        </div>
         
 <% end %>
 </ul>

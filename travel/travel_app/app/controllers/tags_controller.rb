@@ -7,7 +7,7 @@ class TagsController < ApplicationController
    def new
        @tag=Tag.new
    end
-   
+
     def create
         @tag=Tag.new(post_params)
         if @tag.save
@@ -15,7 +15,7 @@ class TagsController < ApplicationController
         else
             render 'new'
         end
-   end
+    end
    
    def edit
        @tag=Tag.find(params[:id])
@@ -37,8 +37,12 @@ class TagsController < ApplicationController
        redirect_to tags_path
    end
    
-   def test
+
+   def show
+        @tag = Tag.find(params[:id]) 
    end
+   
+   
    
    private
        def post_params

@@ -1,7 +1,8 @@
 <h1>Plans</h1>
 
-<h2><%=simple_format @plan.title %></h2>
+  <div class="boxplan">
 
+    <h3><%=simple_format @plan.title %></h3>
 
 
     <% @plan_tags.each do |plan_tag| %>
@@ -9,7 +10,7 @@
     	<div class="boxtext">
     	    <div class="boxtitle"><%= simple_format plan_tag.title %></div>
       	    <p><%= simple_format plan_tag.body %>
-              <img src="" alt="" width="" height="">
+              
       			</p>
           <div class="boxtitle2">URL
               <a href=" #{plan_tag.url} " target="_blank"></a>
@@ -19,3 +20,4 @@
     	
     <% end %>
     
+  </div>
